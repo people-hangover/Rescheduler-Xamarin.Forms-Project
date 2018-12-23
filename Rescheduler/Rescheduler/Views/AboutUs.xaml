@@ -9,6 +9,7 @@
                 <RowDefinition Height="2"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" x:Name="HeaderGrid" BackgroundColor="White">
@@ -76,9 +77,12 @@
                             </Label.GestureRecognizers>
                         </Label>
                     </StackLayout>
+                   
                 </StackLayout>
                 
+                
             </ScrollView>
+            <Button  Grid.Row="4" Text="Test Crash" Clicked="TestCrashButton_Clicked"/>
         </Grid>
 
         

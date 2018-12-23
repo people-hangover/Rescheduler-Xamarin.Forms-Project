@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Rescheduler.ViewModels"
+             x:Class="Rescheduler.Views.MyReservations"
+             Title="My Reservations">
+    
+    <ContentPage.BindingContext>
+        <vm:myReservationsViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>          
+                
+                
+            </Grid>
+                    <BoxView Grid.Row="1" BackgroundColor="Gray"/>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Horizontal"  Grid.Row="0">
+                    <Image Margin="0,10,15,0" HeightRequest="80">
+                        
+                    </Image>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="#1 Red Fox Meeting Room" FontSize="Large"/>
+                        <Label Text=" Nov 24, 2018" FontSize="Large"/>
+
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Grid.Row="1">
+                    <Label Text="Reserved For: George Washington"/>
+                    <Label Text="REservation Notes: Monthly Constitutional Meetup Group"/>
+                    <Label Text="Created: November 3, 2018 2:34 pm"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

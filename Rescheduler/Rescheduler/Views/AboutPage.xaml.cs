@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Crashes;
+using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,5 +13,6 @@ namespace Rescheduler.Views
         {
             InitializeComponent();
         }
+
     }
 }

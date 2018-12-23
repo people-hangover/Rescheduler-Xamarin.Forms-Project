@@ -7,10 +7,11 @@ using Xamarin.Forms;
 
 using Rescheduler.Models;
 using Rescheduler.Services;
+using GalaSoft.MvvmLight;
 
 namespace Rescheduler.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : ObservableObject
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
 

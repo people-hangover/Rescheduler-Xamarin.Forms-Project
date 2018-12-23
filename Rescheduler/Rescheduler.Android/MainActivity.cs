@@ -6,6 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
+using Microsoft.Identity.Client;
+
 
 namespace Rescheduler.Droid
 {
@@ -21,6 +24,14 @@ namespace Rescheduler.Droid
             //platform specific android looks to xam forms
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+            App.UiParent = new UIParent(Xamarin.Forms.Forms.Context as Activity);
         }
+
+            protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
+        }
+    
     }
 }

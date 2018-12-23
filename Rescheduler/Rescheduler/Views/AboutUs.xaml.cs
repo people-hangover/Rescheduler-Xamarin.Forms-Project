@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Crashes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,8 +36,15 @@ namespace Rescheduler.Views
             catch (Exception ex)
             {
                 Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
+                //3.
+                Crashes.TrackError(ex, new Dictionary<string, string>{
+                    { "Where","AboutUsPage-PhoneNumber-Tap"} });
+                //2.Analytics.TrackEvent
+                
+
+                }
             }
-        }
+        
 
         private void TwitterGestureRecognizer_Tapped(object sender, EventArgs e)
         {
@@ -54,6 +62,8 @@ namespace Rescheduler.Views
             //
             Device.OpenUri(new Uri("https://www.facebook.com/foxbuildshop"));
             //Device.OpenUri(new Uri("https://www.facebook.com/sharer/sharer.php?u=https://fox.build/")
+
+            //analytics.trackevent (check in github)
         }
 
    
@@ -64,5 +74,12 @@ namespace Rescheduler.Views
             (RootPage.Master as MenuPage).TakeMeHere(Models.MenuItemType.Browse);
            await RootPage.NavigateFromMenu(0);
         }//
+
+        private void TestCrashButton_Clicked(object sender, EventArgs e)
+        {
+            Crashes.GenerateTestCrash();
+            int zero = 0;
+            var badNumber = zero / zero;
+        }    
     }
 }

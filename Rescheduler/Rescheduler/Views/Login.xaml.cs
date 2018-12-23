@@ -18,3 +18,4 @@ namespace Rescheduler.Views
 		}
 	}
 }
+
