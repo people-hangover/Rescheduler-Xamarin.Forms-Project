@@ -6,6 +6,6 @@ namespace Rescheduler.ViewModels
 {
     class myReservationsViewModel:BaseViewModel
     {
-       var Title ="My Reservations";
+       string Title ="My Reservations";
     }
 }

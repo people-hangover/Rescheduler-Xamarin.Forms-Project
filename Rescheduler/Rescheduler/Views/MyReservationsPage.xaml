@@ -21,7 +21,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>          
+                </Grid.ColumnDefinitions>  
                 
                 
             </Grid>
@@ -43,7 +43,7 @@
                 </StackLayout>
                 <StackLayout Orientation="Vertical" Grid.Row="1">
                     <Label Text="Reserved For: George Washington"/>
-                    <Label Text="REservation Notes: Monthly Constitutional Meetup Group"/>
+                    <Label Text="Reservation Notes: Monthly Constitutional Meetup Group"/>
                     <Label Text="Created: November 3, 2018 2:34 pm"/>
                 </StackLayout>
             </Grid>

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescheduler.iOS", "Reschedu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescheduler.UWP", "Rescheduler\Rescheduler.UWP\Rescheduler.UWP.csproj", "{BE8FBF5D-C3B3-4CFB-98F3-EE30025E037D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescheduler", "Rescheduler\Rescheduler\Rescheduler.csproj", "{677EFE41-3684-4C3F-8C27-A1BD9055804B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rescheduler", "Rescheduler\Rescheduler\Rescheduler.csproj", "{677EFE41-3684-4C3F-8C27-A1BD9055804B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
