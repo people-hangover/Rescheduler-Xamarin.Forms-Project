@@ -41,9 +41,9 @@ namespace Rescheduler
             
             // Handle when your app starts
 
-            AppCenter.Start("android=53d19803-461e-44b4-b198-fae98da11a00;" + 
-                "uwp=21f810e3-9927-42a0-b83a-25bb4a6c81cd;" + 
-                "ios=36fdb15b-db67-461b-af11-661d43da68bc;",
+            AppCenter.Start("android=8fb719da-2e9c-44b8-983b-a4fcc5390442;" +
+                "uwp=e8445189-20cf-4d36-985a-7ce10e865b8e;" +
+                "ios=54cad270-ec60-4579-be15-9fbe815efd6c;",
                 typeof(Analytics), 
                 typeof(Crashes));
         }
@@ -57,8 +57,6 @@ namespace Rescheduler
         {
             // Handle when your app resumes
         }
-
-
     }
 
 }
